@@ -188,49 +188,6 @@ class SmartTaggingSystem:
 
         return matching_files
 
-    # def auto_tag_file(self, filepath):
-    #     """Use AI to automatically suggest tags for a file"""
-    #     if not self.openai_client:
-    #         return []
-    #
-    #     try:
-    #         # Read file content or metadata
-    #         filename = os.path.basename(filepath)
-    #         ext = os.path.splitext(filepath)[1].lower()
-    #
-    #         # For small text files, include content
-    #         content = ""
-    #         if os.path.getsize(filepath) < 50000 and ext in ['.txt', '.md', '.py', '.js', '.html', '.css']:
-    #             with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
-    #                 content = f.read(5000)  # Read first 5KB
-    #
-    #         # Use OpenAI to generate tags
-    #         response = self.openai_client.chat.completions.create(
-    #             model="gpt-3.5-turbo",  # Use a smaller model to save costs
-    #             messages=[
-    #                 {"role": "system",
-    #                  "content": "Generate 3-5 relevant tags for this file based on its name, extension, and content if provided. Return only a comma-separated list of tags, nothing else."},
-    #                 {"role": "user", "content": f"Filename: {filename}\nExtension: {ext}\nContent snippet: {content}"}
-    #             ],
-    #             max_tokens=50,
-    #             temperature=0.3
-    #         )
-    #
-    #         tags = [tag.strip() for tag in response.choices[0].message.content.split(',')]
-    #
-    #         # Store auto-generated tags
-    #         if filepath not in self.tags_data:
-    #             self.tags_data[filepath] = {'tags': [], 'auto_tags': []}
-    #
-    #         self.tags_data[filepath]['auto_tags'] = tags
-    #         self.save_tags()
-    #
-    #         return tags
-    #
-    #     except Exception as e:
-    #         print(f"Error auto-tagging file: {e}")
-    #         return []
-
     def get_all_tags(self):
         """Get a list of all used tags"""
         all_tags = set()

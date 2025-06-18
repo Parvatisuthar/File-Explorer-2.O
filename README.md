@@ -29,7 +29,10 @@ File Explorer 2.0 is an advanced Python-based file manager with a modern GUI bui
 ## 📷 Screenshots
 
 <p align="center">
-  <img src="C:/Users/Parvati/OneDrive/Pictures/Screenshots/1.png" width="600" alt="Main UI Screenshot">
+  <img src="ScreenShots/1.png" width="550" alt="Main UI Screenshot">
+  <img src="ScreenShots/2.png" width="550" alt="Main UI Screenshot">
+  <img src="ScreenShots/3.png" width="550" alt="Main UI Screenshot">
+  <img src="ScreenShots/4.png" width="550" alt="Main UI Screenshot">
 </p>
 
 ---
